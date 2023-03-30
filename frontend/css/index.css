@@ -15,10 +15,10 @@ header #navone{
     justify-content: space-between;
     align-items: center;
     position:sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color:greenyellow;
+    top: 0px;
+    
+   
+    background-color:rgb(219, 221, 225);
     opacity: 1;
     z-index: 1000;
 }
@@ -31,9 +31,10 @@ header #navone{
 
 }
 #logo select{
-    height: 30px;
     width: 40%;
     border-radius:10px;
+    padding: 5px;
+    outline: none;
 }
 #search{
     display: flex;
@@ -48,6 +49,8 @@ header #navone{
     height: 100%;
     border-radius:10px ;
     border: none;
+    padding: 15px;
+    outline: none;
 }
 .down{
     display: flex;
@@ -61,6 +64,9 @@ header #navone{
     border-radius: 10px;
     cursor: pointer;
     border: none;
+    position: relative;
+    right: 50px;
+    background: none;
 }
 
 
@@ -87,13 +93,13 @@ header #navone{
     color:white;
     font-weight: bold;
     height: 100%;
-   
+   margin:2px;
 } 
  #navbartwo a:hover {
-    border-bottom: 5px solid #f58fa0;
+    border-bottom: 3px solid #e9e1e2;
    
 }
-#navbartwo a:nth-child(1):hover {
+/* #navbartwo a:nth-child(1):hover {
     border-bottom: 5px solid #ff4500;
 }
 #navbartwo a:nth-child(2):hover {
@@ -107,7 +113,7 @@ header #navone{
 }
 #navbartwo a:nth-child(5):hover {
     border-bottom: 5px solid #0db7af;
-} 
+}  */
 
 
 #navbartwo #studio{
@@ -141,7 +147,6 @@ header #navone{
     position: relative;
 }
 #reggDropdown > #drop{
-    width: 15rem;
     height: 0;
     padding-right: 1rem;
     padding-bottom: 1rem;
@@ -151,30 +156,29 @@ header #navone{
     visibility: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     border-radius: 1.5rem;
     cursor: default;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: all 500ms;
+    padding: 0;
 }
 #reggDropdown a{
-    width: 65%;
+    width: 100%;
     text-decoration: none;
     color: unset;
-    display: inline-block;
-    text-align: right;
+    text-align: center;
     border-radius: 1rem;
-    padding: 1.5rem;
-    margin-top: 1rem;
+    padding: 0.5rem;
     transition: all 500ms;
     
 }
     #reggDropdown:hover #drop{
         visibility: visible;
         width: 12rem;
-        height: 10rem;
+        height: 7rem;
     }
     #reggDropdown > #drop .dropList{
         font-size: 0;
@@ -184,7 +188,8 @@ header #navone{
     }
 
     #reggDropdown a:hover{
-        background-color: #f8d7cf; 
+        background-color: blue; 
+        color:white;
     }
 
 
