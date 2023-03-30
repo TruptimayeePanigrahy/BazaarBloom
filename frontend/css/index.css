@@ -149,7 +149,7 @@ header #navone{
 #reggDropdown > #drop{
     height: 0;
     padding-right: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.3rem;
     position: absolute;
     top: 100%;
     right: 0;
@@ -178,7 +178,18 @@ header #navone{
     #reggDropdown:hover #drop{
         visibility: visible;
         width: 12rem;
-        height: 7rem;
+        height: 9rem;
+    }
+    #drop button{
+        border: none;
+        width:100%;
+        border-radius: 1rem;
+        padding: 2px;
+        font-size: 20px;
+    }
+    #drop button:hover{
+        background-color: blue; 
+        color:white;
     }
     #reggDropdown > #drop .dropList{
         font-size: 0;
@@ -266,20 +277,22 @@ cursor: pointer;
 #popular h1{
     font-size: 25px;
     margin: 20px 110px;
-    color: rgb(97, 95, 95);
+    font-weight: bold;
     
 }
 #buy{
     text-align: center;
     font-size: 30px;
-    color: rgb(62, 61, 61);
+    font-weight: bold;
+    margin-top: 30px;
 }
-.care{
+#subcare{
    display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 20px;
     width:100%;
     margin: auto;
+    padding: 40px;
 }
 
 #carouseldiv{
@@ -287,7 +300,198 @@ cursor: pointer;
     margin: 30px auto;
     /* background-color: #ecf1f2; */
 }
+
+
 .care img{
-    height: 100px;
+    height: 200px;
+    width: 100%;
+}
+.care{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 3px;
+
+}
+.care:hover{
+    border: 1px solid blue;
+    cursor: pointer;
+}
+.care>p:nth-child(3){
+    text-align: right;
+   
+}
+.care>p:nth-child(2){
+    color: rgb(94, 53, 53);
+}
+#mobile{
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 90%;
+    margin: auto;
+}
+#mobileone{
+    display: flex;
+    justify-content: space-between;
+
+}
+#subdiv{
+    display: grid;
+     grid-template-columns: repeat(4,1fr);
+     gap: 20px;
+     width:100%;
+     margin: auto;
+     padding: 40px;
+ }
+ .smalldiv p:nth-child(1){
+    
+ }
+.smalldiv div{
+    display: flex;
+    justify-content: space-between;
+}
+.smalldiv{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+
+}
+.smalldiv:hover{
+    border: 1px solid blue;
+    cursor: pointer;
+}
+.smalldiv img{
+    height: 150px;
+}
+.smalldiv button{
+    padding: 0px 10px;
+    border:1px solid blue;
+    color: blue;
+    border-radius: 5px;
+}
+.smalldiv button:hover{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}
+#home{
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 90%;
+    margin: auto;
+}
+#home1{
+    display: flex;
+    justify-content: space-between;
+
+}
+#homediv{
+    display: grid;
+     grid-template-columns: repeat(4,1fr);
+     gap: 20px;
+     width:100%;
+     margin: auto;
+     padding: 40px;
+ }
+ .smallhome div{
+    display: flex;
+    justify-content: space-between;
+}
+.smallhome{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+
+}
+.smallhome:hover{
+    border: 1px solid blue;
+    cursor: pointer;
+}
+.smallhome img{
+    height: 150px;
+}
+.smallhome button{
+    padding: 0px 10px;
+    border:1px solid blue;
+    color: blue;
+    border-radius: 5px;
+}
+.smallhome button:hover{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}
+#electronic1{
+    display: flex;
+    justify-content: space-between; 
 }
 
+.smallele div{
+    display: flex;
+    justify-content: space-between;
+}
+.smallele{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+
+}
+.smallele:hover{
+    border: 1px solid blue;
+    cursor: pointer;
+}
+.smallele img{
+    height: 150px;
+}
+.smallele button{
+    padding: 0px 10px;
+    border:1px solid blue;
+    color: blue;
+    border-radius: 5px;
+}
+.smallele button:hover{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}
+#elediv{
+    display: grid;
+     grid-template-columns: repeat(4,1fr);
+     gap: 20px;
+     width:100%;
+     margin: auto;
+     padding: 40px;
+ }
+ #electronic{
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 90%;
+    margin: auto;
+}
+#browse img{
+height: 80px;
+text-align: center;
+}
+
+#browse{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    align-items: center;
+    margin:20px auto;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#browse div:hover{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+}
+#browse div{
+    text-align: center;
+}

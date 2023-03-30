@@ -35,7 +35,7 @@ userRoute.post("/login",async(req,res)=>{
            const psswordcorrect=await bcrypt.compareSync(payload.password,user.password)
            if(psswordcorrect){
             const token=await jwt.sign({email:user.email,userid:user._id},process.env.secrete_key,{expiresIn:"1hr"})
-            res.status(200).json({msg:"Login success",token})
+            res.status(200).json({msg:"Login success",token,user})
            }
         else{
             res.status(400).json({msg:"invalid credentials"})
