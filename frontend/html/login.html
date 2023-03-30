@@ -13,6 +13,9 @@
     />
   </head>
   <style>
+    body {
+      background-color: rgb(175, 175, 241);
+    }
     #submit {
       background: none;
       border: 1px solid rgb(111, 111, 223);
@@ -43,6 +46,8 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         margin-top: 5%;
         padding: 5px;
+        background-color: white;
+        border-radius: 10px;
       "
       id="container"
     >
@@ -106,6 +111,7 @@
     crossorigin="anonymous"
   ></script>
   <script>
+    let name;
     document.getElementById("submit").addEventListener("click", () => {
       let email = document.getElementById("email").value;
       let password = document.getElementById("password").value;
@@ -121,9 +127,13 @@
         })
         .then((data) => {
           console.log(data);
+          console.log(data.user);
+          name = data.user.username;
+          console.log(name);
           localStorage.setItem("token", data.token);
+          localStorage.setItem("name", name);
           alert("Login sucessful!!");
-          // window.location.href = "../index.html";
+          window.location.href = "../index.html";
         })
         .catch((err) => {
           console.log(err);
