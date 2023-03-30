@@ -1,6 +1,6 @@
 const mongoose=require("mongoose")
 const userSchema=mongoose.Schema({
-    usernsme:{
+    username:{
         type:String,
         require:true
     },
@@ -16,7 +16,7 @@ const userSchema=mongoose.Schema({
         type:String,
         require:true
     },
-    age:{
+    mobileNumber:{
         type:Number,
         require:true
     }

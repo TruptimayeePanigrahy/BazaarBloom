@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    #submit {
+      background: none;
+      border: 1px solid rgb(111, 111, 223);
+      color: rgb(111, 111, 223);
+      border-radius: 6px;
+      padding: 10px 15px;
+      font-weight: bold;
+    }
+    #submit:hover {
+      background-color: rgb(111, 111, 223);
+      color: white;
+    }
+    .signup {
+      margin: 20px 20px 0px 0px;
+      color: lightgreen;
+    }
+    .signup a {
+      color: rgb(111, 111, 223);
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div
+      class="container-sm"
+      style="
+        max-width: 30%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-top: 5%;
+        padding: 5px;
+      "
+      id="container"
+    >
+      <!-- Content here -->
+      <h1
+        class="text-center"
+        style="
+          border-bottom: 3px solid rgb(111, 111, 223);
+          width: 35%;
+          margin: auto;
+          color: rgb(111, 111, 223);
+          padding: 20px;
+        "
+      >
+        Log In
+      </h1>
+
+      <div class="m-3 mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="name@example.com"
+          style="
+            background: none;
+            border: none;
+            border-bottom: 1px solid black;
+            color: black;
+          "
+        />
+      </div>
+
+      <div class="m-3 mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          placeholder="Abc@1"
+          style="
+            background: none;
+            border: none;
+            border-bottom: 1px solid black;
+            color: black;
+          "
+        />
+      </div>
+      <div class="d-flex justify-content-end mr-3 my-2 signup">
+        <p style="color: black">Don't have an account?</p>
+        <a href="./signup.html">signup</a>
+      </div>
+      <div class="d-flex justify-content-center m-3">
+        <button id="submit">LogIn</button>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    document.getElementById("submit").addEventListener("click", () => {
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      let res = fetch("http://localhost:8800/user/login", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      })
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          console.log(data);
+          localStorage.setItem("token", data.token);
+          alert("Login sucessful!!");
+          // window.location.href = "../index.html";
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    });
+  </script>
+</html>
