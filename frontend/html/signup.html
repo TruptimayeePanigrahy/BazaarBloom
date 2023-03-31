@@ -15,18 +15,22 @@
   <style>
     #submit {
       background: none;
-      border: 1px solid rgb(111, 111, 223);
-      color: rgb(111, 111, 223);
+      border: 2px solid white;
+      color: white;
       border-radius: 6px;
       padding: 10px 15px;
       font-weight: bold;
+      background-color: blueviolet;
     }
     #submit:hover {
       background-color: blue;
       color: white;
     }
     body {
-      background-color: rgb(175, 175, 241);
+      background-image: url("https://cdn.pixabay.com/photo/2016/02/15/11/38/background-1201003_960_720.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
     }
   </style>
   <body>
@@ -37,25 +41,29 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         margin-top: 2%;
         padding: 20px;
-        background-color: white;
         border-radius: 10px;
+        font-weight: bold;
+        z-index: 999;
+        color: white;
+        background: rgba(255, 255, 255, 0.133);
+        border: 1px solid #fff;
+        backdrop-filter: blur(3px);
+        box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.203);
       "
       id="container"
     >
       <!-- Content here -->
       <h1
         class="text-center"
-        style="
-          border-bottom: 3px solid rgb(111, 111, 223);
-          width: 40%;
-          margin: auto;
-          color: rgb(111, 111, 223);
-        "
+        style="font-weight: bold; width: 40%; margin: auto; color: white"
       >
         Sign Up
       </h1>
       <div class="m-3 mb-3">
-        <label for="username" class="form-label" style="margin: -10px 2px"
+        <label
+          for="username"
+          class="form-label"
+          style="margin: -10px 2px; color: blueviolet"
           >User Name</label
         >
         <input
@@ -63,11 +71,14 @@
           class="form-control"
           id="username"
           placeholder="User"
-          style="background: none; border: none; border-bottom: 1px solid black"
+          style="border: none"
         />
       </div>
       <div class="m-3 mb-3">
-        <label for="email" class="form-label" style="margin: -10px 2px"
+        <label
+          for="email"
+          class="form-label"
+          style="margin: -10px 2px; color: blueviolet"
           >Email address</label
         >
         <input
@@ -75,12 +86,15 @@
           class="form-control"
           id="email"
           placeholder="name@example.com"
-          style="background: none; border: none; border-bottom: 1px solid black"
+          style="border: none"
         />
       </div>
 
       <div class="m-3 mb-3">
-        <label for="City" class="form-label" style="margin: -10px 2px"
+        <label
+          for="City"
+          class="form-label"
+          style="margin: -10px 2px; color: blueviolet"
           >City</label
         >
         <input
@@ -88,11 +102,14 @@
           class="form-control"
           id="city"
           placeholder="India"
-          style="background: none; border: none; border-bottom: 1px solid black"
+          style="border: none"
         />
       </div>
       <div class="m-3 mb-3">
-        <label for="mobilenumber" class="form-label" style="margin: -10px 2px"
+        <label
+          for="mobilenumber"
+          class="form-label"
+          style="margin: -10px 2px; color: blueviolet"
           >Mobile Number</label
         >
         <input
@@ -100,16 +117,14 @@
           class="form-control"
           id="Mobile"
           placeholder="1234567890"
-          style="
-            background: none;
-            border: none;
-            border-bottom: 1px solid black;
-            color: blue;
-          "
+          style="border: none"
         />
       </div>
       <div class="m-3 mb-3">
-        <label for="password" class="form-label" style="margin: -10px 2px"
+        <label
+          for="password"
+          class="form-label"
+          style="margin: -10px 2px; color: blueviolet"
           >Password</label
         >
         <input
@@ -117,14 +132,14 @@
           class="form-control"
           id="password"
           placeholder="Abc@1"
-          style="background: none; border: none; border-bottom: 1px solid black"
+          style="border: none"
         />
       </div>
       <div class="m-3 mb-3">
         <label
           for="confirmpassword"
           class="form-label"
-          style="margin: -10px 2px"
+          style="margin: -10px 2px; color: blueviolet"
           >Confirm Password</label
         >
         <input
@@ -132,16 +147,13 @@
           class="form-control"
           id="confirmpassword"
           placeholder="Abc@1"
-          style="
-            background: none;
-            border: none;
-            border-bottom: 1px solid black;
-            color: blue;
-          "
+          style="border: none"
         />
       </div>
       <p style="text-align: right">
-        Already have an account?<a href="./login.html">Login</a>
+        Already have an account?<a style="color: blueviolet" href="./login.html"
+          >Login</a
+        >
       </p>
 
       <div class="d-flex justify-content-center m-3">
