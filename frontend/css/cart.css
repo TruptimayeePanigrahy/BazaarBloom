@@ -257,7 +257,11 @@ height: 150px;
 width: 170px;
 
 }
+<<<<<<< Updated upstream
 .card{
+=======
+.box{
+>>>>>>> Stashed changes
    display:flex;
   
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -266,8 +270,13 @@ width: 170px;
     font-weight: bold;
     cursor: pointer;
 }
+<<<<<<< Updated upstream
 .card div{
     border: 1px solid  red;
+=======
+.box div{
+    padding: 10px;
+>>>>>>> Stashed changes
 }
 #showdata button{
     width: 150px;
@@ -275,6 +284,11 @@ width: 170px;
     color: white;
     border-radius: 10px;
     padding: 10px;
+<<<<<<< Updated upstream
+=======
+    margin:0px 50px;
+    font-weight: bold;
+>>>>>>> Stashed changes
 }
 #showdata{
     margin:50px;
