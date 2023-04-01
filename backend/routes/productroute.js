@@ -13,7 +13,11 @@ Router.get("/show",async(req,res)=>{
     // const decoded=jwt.verify(token,process.env.secrete_key)
 
     try {
+<<<<<<< Updated upstream
         let data=await productmodel.find()
+=======
+        let data=await productmodel.find(req.query)
+>>>>>>> Stashed changes
         res.status(200).send(data)
     } catch (error) {
         console.log(error)

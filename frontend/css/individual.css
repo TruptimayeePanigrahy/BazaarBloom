@@ -250,3 +250,61 @@ cursor: pointer;
     padding: 5px;
     font-size: 20px;
 }
+<<<<<<< Updated upstream
+=======
+#india{
+    display: flex;
+    width: 90%;
+    margin:30px auto;
+    
+}
+#rightbox{
+    font-size: 30px;
+    width: 40%;
+    margin: 90px;
+}
+#indimage{
+    text-align: center;
+    width: 50%;
+}
+.call{
+    background-color: rgb(73, 73, 247);
+    color: white;
+    border-radius: 10px;
+    padding: 10px 40px;
+    font-weight:bold;
+    font-size: 20px;
+  margin-right: 70px;
+}
+#div{
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid black;
+    padding-top:30px ;
+}
+#div1{
+    display: flex;
+    justify-content: space-around;
+  
+}
+#div2{
+    display: flex;
+    justify-content: space-around;
+    
+}
+#div3{
+    display: flex;
+    justify-content: space-around;
+    
+}
+#div4{
+    display: flex;
+    justify-content: space-around;
+    
+}
+#div5{
+    display: flex;
+    justify-content: space-around;
+    
+}
+>>>>>>> Stashed changes
