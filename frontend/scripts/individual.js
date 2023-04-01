@@ -1,12 +1,3 @@
-<<<<<<< Updated upstream
-let name = localStorage.getItem("name");
-  let token = localStorage.getItem("token");
-  let user = document.getElementById("profile");
-  if (name) {
-    user.innerText = name;
-  }
-
-=======
 let username = localStorage.getItem("name");
   let token = localStorage.getItem("token");
   let user = document.getElementById("profile");
@@ -14,34 +5,23 @@ let username = localStorage.getItem("name");
     user.innerText = username;
   }
   let array = JSON.parse(localStorage.getItem("cart-product")) || [];
->>>>>>> Stashed changes
   let button = document.getElementById("List");
   button.addEventListener("click", () => {
     // localStorage.removeItem(name);
     // localStorage.removeItem(token);
-<<<<<<< Updated upstream
-    console.log(name, token);
-=======
     console.log(username, token);
->>>>>>> Stashed changes
     console.log("trupti");
     localStorage.clear();
     user.innerText = "Profile";
   });
 
 let data=JSON.parse(localStorage.getItem("single-product"))
-<<<<<<< Updated upstream
-let head=document.getElementById("heading")
-head.innerText=data.name
-
-
-=======
 let indimage=document.getElementById("indimage")
 let rightbox=document.getElementById("rightbox")
 let img=document.createElement("img")
 img.src=data.image
-img.style.height="400px"
-img.style.height="400px"
+img.style.height="300px"
+img.style.height="300px"
 let container=document.querySelector("#div")
 let div1=document.getElementById("div1")
 let div2=document.getElementById("div2")
@@ -110,4 +90,3 @@ function totaldata(){
         totalproduct.innerText=array.length
     }
   }
->>>>>>> Stashed changes

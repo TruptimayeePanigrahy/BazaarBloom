@@ -1,20 +1,12 @@
-<<<<<<< Updated upstream
-function displaydata() {
-    fetch("http://localhost:8800/product/show")
-=======
 let fetchdata
 function displaydata() {
     fetch(`http://localhost:8800/product/show`)
->>>>>>> Stashed changes
         .then((res) => {
           return res.json();
         })
         .then((data) => {
           console.log(data);
-<<<<<<< Updated upstream
-=======
           fetchdata=data
->>>>>>> Stashed changes
           display(data);
         })
         .catch((err) => {
@@ -37,20 +29,12 @@ function displaydata() {
         nameinp.innerText=element.name
 
         let price=document.createElement("p")
-<<<<<<< Updated upstream
-        price.innerText=element.price
-=======
         price.innerText=`₹${element.price}`
->>>>>>> Stashed changes
         let card2=document.createElement("div")
        
         
 let button2=document.createElement("button")
 button2.innerText="Add To Cart"
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 button2.addEventListener("click",()=>{
     if(token){
       
@@ -70,10 +54,7 @@ if(filtered.length>0){
   array.push(element)
          localStorage.setItem("cart-product",JSON.stringify(array))
         alert("product added")
-<<<<<<< Updated upstream
-=======
         totaldata()
->>>>>>> Stashed changes
 }
        
       }
@@ -111,9 +92,6 @@ if(filtered.length>0){
     console.log("trupti");
     localStorage.clear();
     user.innerText = "Profile";
-<<<<<<< Updated upstream
-  });
-=======
   });
   
   totaldata()
@@ -275,4 +253,3 @@ return true
   display(filtered)
   console.log(filtered)
 }
->>>>>>> Stashed changes

@@ -296,9 +296,6 @@ cursor: pointer;
     display: flex;
     justify-content: space-between;
     margin: 0px 20px;
-<<<<<<< Updated upstream
-}
-=======
 }
 #type div{
     display: flex;
@@ -334,4 +331,3 @@ cursor: pointer;
     border:1px solid blue;
     border-radius: 10px;
 }
->>>>>>> Stashed changes
