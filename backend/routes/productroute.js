@@ -33,6 +33,48 @@ Router.post("/add",async(req,res)=>{
     }
 })
 
+Router.get("/price1",async(req,res)=>{
+    
+
+    try {
+        let data=await productmodel.find().sort({price:1})
+        res.status(200).send(data)
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+Router.get("/price2",async(req,res)=>{
+    
+
+    try {
+        let data=await productmodel.find().sort({price:-1})
+        res.status(200).send(data)
+    } catch (error) {
+        console.log(error)
+    }
+})
+Router.get("/desc1",async(req,res)=>{
+    
+
+    try {
+        let data=await productmodel.find().sort({description:1})
+        res.status(200).send(data)
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+Router.get("/desc2",async(req,res)=>{
+    
+
+    try {
+        let data=await productmodel.find().sort({description:-1})
+        res.status(200).send(data)
+    } catch (error) {
+        console.log(error)
+    }
+})
 
 
 

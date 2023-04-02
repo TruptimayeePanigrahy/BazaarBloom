@@ -282,7 +282,9 @@ cursor: pointer;
 }
 #div1{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 65%;
+    margin: auto;
   
 }
 #div2{

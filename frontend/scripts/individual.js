@@ -73,9 +73,16 @@ indimage.append(img,container,div1,div2,div3,div4,div5)
 let button1=document.createElement("button")
 button1.innerText="CALL"
 button1.classList.add("call")
+button1.addEventListener("click",()=>{
+  window.location.href="../html/ownerdetail.html"
+})
 let button2=document.createElement("button")
 button2.innerText="CHAT"
 button2.classList.add("call")
+button2.addEventListener("click",()=>{
+  window.location.href="../html/chat.html"
+})
+
 // button1.style.color="white"
 // button1.style.background-color="blue"
 rightbox.append(about,price,button1,button2)

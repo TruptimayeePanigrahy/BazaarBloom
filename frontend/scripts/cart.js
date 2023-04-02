@@ -34,6 +34,10 @@ data.forEach((element,index) => {
         price.innerText=element.price
         let button=document.createElement("button")
         button.innerText="VIEW DETAILS"
+        button.addEventListener("click",()=>{
+          localStorage.setItem("single-product",JSON.stringify(element))
+          window.location.href="../html/individual.html"
+        })
         let button2=document.createElement("button")
         button2.innerText="DELETE";
         button2.addEventListener("click",()=>{

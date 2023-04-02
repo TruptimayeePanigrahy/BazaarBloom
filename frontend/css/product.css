@@ -260,7 +260,7 @@ cursor: pointer;
 }
 #alldata{
     width: 80%;
-    margin: auto;
+    margin: auto 20px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap:20px;
@@ -330,4 +330,22 @@ cursor: pointer;
     padding: 5px 20px;
     border:1px solid blue;
     border-radius: 10px;
+}
+#price2{
+    margin: 10px;
+    padding: 5px 20px;
+    border:1px solid blue;
+    border-radius: 10px;
+}
+#pagination{
+    display: flex;
+    justify-content: center;
+}
+#pagination button{
+    margin: 20px;
+    background-color:rgb(135, 135, 241);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
 }

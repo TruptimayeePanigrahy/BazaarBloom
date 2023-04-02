@@ -56,12 +56,12 @@
               <button id="List">LogOut</button>
             </div>
             <div class="down">
-              <i class="fa-regular fa-user"></i>
+              <i class="fa-regular fa-user" style="color: cornflowerblue"></i>
               <span id="profile">profile</span>
             </div>
           </div>
           <div class="down">
-            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-heart" style="color: cornflowerblue"></i>
             <span>wishlist</span>
           </div>
           <div class="down">
@@ -125,6 +125,19 @@
             </label>
           </div>
         </div>
+        <button
+          id="onclick"
+          style="
+            background-color: rgb(135, 135, 241);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 10px;
+            margin: 30px;
+            font-weight: bold;
+          "
+        >
+          show data
+        </button>
         <div id="Brand">
           <p>Brand</p>
           <div>
@@ -171,33 +184,43 @@
             <label><input type="checkbox" id="lg" />LG</label>
           </div>
         </div>
-        <div id="filter">
-          <select id="price" class="select">
-            <option value="hide">--Sort By Price --</option>
-            <option value="10k to 20k">10k to 20k</option>
-            <option value="20k to 50k">20k to 30k</option>
-            <option value="50k to 1L">30k to 40k</option>
-            <option value="above 1L">40k to 50k</option>
-          </select>
-        </div>
         <button
-          id="onclick"
+          id="offclick"
           style="
             background-color: rgb(135, 135, 241);
             color: white;
             padding: 5px 20px;
             border-radius: 10px;
-            margin-left: 30px;
+            margin: 30px;
             font-weight: bold;
           "
         >
           show data
         </button>
+        <div id="filter">
+          <select id="price" class="select">
+            <option value="hide">--Sort By Price --</option>
+            <option value="hightolow">High to Low</option>
+            <option value="LowtoHigh">Low to High</option>
+          </select>
+        </div>
+        <div id="filter2">
+          <select id="price2" class="select">
+            <option value="hide">--Sort By Description --</option>
+            <option value="atoz">A to Z</option>
+            <option value="ztoa">Z to A</option>
+          </select>
+        </div>
       </div>
 
       <div id="alldata">
         <!-- append here -->
       </div>
+    </div>
+    <div id="pagination">
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
     </div>
     <hr />
     <footer>
