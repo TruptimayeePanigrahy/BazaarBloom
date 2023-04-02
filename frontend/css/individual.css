@@ -250,8 +250,6 @@ cursor: pointer;
     padding: 5px;
     font-size: 20px;
 }
-<<<<<<< Updated upstream
-=======
 #india{
     display: flex;
     width: 90%;
@@ -284,7 +282,9 @@ cursor: pointer;
 }
 #div1{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 65%;
+    margin: auto;
   
 }
 #div2{
@@ -307,4 +307,3 @@ cursor: pointer;
     justify-content: space-around;
     
 }
->>>>>>> Stashed changes

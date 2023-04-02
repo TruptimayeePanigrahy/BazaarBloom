@@ -13,11 +13,7 @@ Router.get("/show",async(req,res)=>{
     // const decoded=jwt.verify(token,process.env.secrete_key)
 
     try {
-<<<<<<< Updated upstream
-        let data=await productmodel.find()
-=======
         let data=await productmodel.find(req.query)
->>>>>>> Stashed changes
         res.status(200).send(data)
     } catch (error) {
         console.log(error)
@@ -37,6 +33,73 @@ Router.post("/add",async(req,res)=>{
     }
 })
 
+Router.get("/price1",async(req,res)=>{
+    
+
+    try {
+        let data=await productmodel.find().sort({price:1})
+        res.status(200).send(data)
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+Router.get("/price2",async(req,res)=>{
+    
+
+    try {
+        let data=await productmodel.find().sort({price:-1})
+        res.status(200).send(data)
+    } catch (error) {
+        console.log(error)
+    }
+})
+Router.get("/desc1",async(req,res)=>{
+    
+
+    try {
+        let data=await productmodel.find().sort({description:1})
+        res.status(200).send(data)
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+Router.get("/desc2",async(req,res)=>{
+    
+
+    try {
+        let data=await productmodel.find().sort({description:-1})
+        res.status(200).send(data)
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+Router.get('/page', async (req, res) => {
+    // destructure page and limit and set default values
+    const { page = 1, limit = 7 } = req.query;
+  
+    try {
+      // execute query with page and limit values
+      const posts = await productmodel.find()
+        .limit(limit * 1)
+        .skip((page - 1) * limit)
+        .exec();
+  
+      // get total documents in the Posts collection 
+      const count = await productmodel.countDocuments();
+  
+      // return response with posts, total pages, and current page
+      res.json({
+        posts,
+        totalPages: Math.ceil(count / limit),
+        currentPage: page
+      });
+    } catch (err) {
+      console.error(err.message);
+    }
+  });
 
 
 

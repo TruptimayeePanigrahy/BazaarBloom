@@ -256,6 +256,7 @@ cursor: pointer;
     width: 85%;
     justify-content: space-around;
     margin: auto;
+    text-align: center;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -278,6 +279,7 @@ cursor: pointer;
     width:100%;
     margin: auto;
     padding: 40px;
+    color: blue;
 }
 
 #carouseldiv{
@@ -296,7 +298,6 @@ cursor: pointer;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 3px;
-
 }
 .care:hover{
     border: 1px solid blue;
@@ -307,7 +308,7 @@ cursor: pointer;
    
 }
 .care>p:nth-child(2){
-    color: rgb(94, 53, 53);
+    color:blue;
 }
 #mobile{
     padding: 20px;
@@ -474,7 +475,7 @@ text-align: center;
     background-color: rgb(118, 118, 238);
     color: white;
     cursor: pointer;
-    padding: 10px;
+   
     border-radius: 10px;
 }
 #browse div{

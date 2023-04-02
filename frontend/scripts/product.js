@@ -1,21 +1,16 @@
-<<<<<<< Updated upstream
-function displaydata() {
-    fetch("http://localhost:8800/product/show")
-=======
 let fetchdata
 function displaydata() {
     fetch(`http://localhost:8800/product/show`)
->>>>>>> Stashed changes
         .then((res) => {
           return res.json();
         })
         .then((data) => {
           console.log(data);
-<<<<<<< Updated upstream
-=======
           fetchdata=data
->>>>>>> Stashed changes
           display(data);
+          searchbar(fetchdata)
+          // page1(fetchdata)
+
         })
         .catch((err) => {
           console.log(err);
@@ -37,20 +32,12 @@ function displaydata() {
         nameinp.innerText=element.name
 
         let price=document.createElement("p")
-<<<<<<< Updated upstream
-        price.innerText=element.price
-=======
         price.innerText=`₹${element.price}`
->>>>>>> Stashed changes
         let card2=document.createElement("div")
        
         
 let button2=document.createElement("button")
 button2.innerText="Add To Cart"
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 button2.addEventListener("click",()=>{
     if(token){
       
@@ -70,10 +57,7 @@ if(filtered.length>0){
   array.push(element)
          localStorage.setItem("cart-product",JSON.stringify(array))
         alert("product added")
-<<<<<<< Updated upstream
-=======
         totaldata()
->>>>>>> Stashed changes
 }
        
       }
@@ -111,9 +95,6 @@ if(filtered.length>0){
     console.log("trupti");
     localStorage.clear();
     user.innerText = "Profile";
-<<<<<<< Updated upstream
-  });
-=======
   });
   
   totaldata()
@@ -139,8 +120,7 @@ if(filtered.length>0){
           console.log(err);
         });
   }
-  let searchbox=document.getElementById("search")
-  let search=document.getElementById("searchbtn")
+  
   // search.addEventListener('keypress', function (e) {
   //   if (e.key === 'Enter') {
   //   //   console.log("yes")
@@ -172,6 +152,10 @@ filterbtn.addEventListener("click",()=>{
 
 
  
+})
+let filterbtn2=document.getElementById("offclick")
+filterbtn2.addEventListener("click",()=>{
+  showbrand()
 })
 
 function click(){
@@ -275,4 +259,153 @@ return true
   display(filtered)
   console.log(filtered)
 }
->>>>>>> Stashed changes
+
+
+// sorting by price
+
+
+function sortdata() {
+  fetch(`http://localhost:8800/product/price1`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        fetchdata=data
+        display(fetchdata);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+}
+function sortdata2() {
+  fetch(`http://localhost:8800/product/price2`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        fetchdata=data
+        display(fetchdata);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+}
+
+let filter1=document.getElementById("price")
+filter1.addEventListener("change", () => {
+  if (filter1.value == "hightolow") {
+    sortdata2()
+  } else if(filter1.value == "LowtoHigh"){
+    
+    sortdata()
+  }
+});
+
+function descdata() {
+  fetch(`http://localhost:8800/product/desc1`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        fetchdata=data
+        display(fetchdata);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+}
+function descdata2() {
+  fetch(`http://localhost:8800/product/desc2`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        fetchdata=data
+        display(fetchdata);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+}
+
+let filter2=document.getElementById("price2")
+filter2.addEventListener("change", () => {
+  if (filter2.value == "atoz") {
+    descdata()
+  } else if(filter2.value == "ztoa"){
+    
+    descdata2()
+  }
+});
+
+
+let searchbutton = document.getElementById("searchbtn");
+
+searchbutton.addEventListener("click", () => {
+    let searchparam = document.getElementById("search").value;
+    let filtered = fetchdata.filter((ele, i) => {
+        if (
+            ele.brand.includes(searchparam) === true
+        ) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    display(filtered);
+});
+
+
+
+// let number=Math.floor(1000000000 + Math.random() * 900000000);
+// console.log(number)
+// var digits = Math.floor(Math.random() * 9000000000) + 1000000000;
+// console.log(digits)
+
+
+
+const searchBar = document.getElementById("searchbtn");
+
+function searchbar(fetchdata){
+  const search = document.getElementById("search");
+  search.addEventListener("input", (e) => {
+    e.preventDefault();
+    const value = e.target.value;
+  
+    let newArr = fetchdata.filter(element => {
+  
+      return element.producttype.toLowerCase().includes(value) || element.description.toLowerCase().includes(value);
+  
+    })
+    // console.log(data)
+    display(newArr)
+  
+  })
+}
+ let btn1=document.getElementById("btn1")
+ let btn2=document.getElementById("btn2")
+ let btn3=document.getElementById("btn3")
+
+ btn1.addEventListener("click",()=>{
+  page1()
+ })
+
+
+function page1(fetchdata){
+  fetch(`http://localhost:8800/product/page?page=1&&limit=7`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        fetchdata=data
+        display(fetchdata);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+}

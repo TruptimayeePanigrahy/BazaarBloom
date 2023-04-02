@@ -36,16 +36,12 @@
         </div>
 
         <div id="search">
-<<<<<<< Updated upstream
-          <input type="text" name="" id="" placeholder="search anything here" />
-=======
           <input
             type="text"
             name=""
             id="search"
             placeholder="search anything here"
           />
->>>>>>> Stashed changes
           <button id="searchbtn">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
@@ -60,23 +56,19 @@
               <button id="List">LogOut</button>
             </div>
             <div class="down">
-              <i class="fa-regular fa-user"></i>
+              <i class="fa-regular fa-user" style="color: cornflowerblue"></i>
               <span id="profile">profile</span>
             </div>
           </div>
           <div class="down">
-            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-heart" style="color: cornflowerblue"></i>
             <span>wishlist</span>
           </div>
           <div class="down">
             <a href="../html/cart.html"
               ><i class="fa-solid fa-bag-shopping"></i
             ></a>
-<<<<<<< Updated upstream
-            <span>bag</span>
-=======
             <span id="total">bag</span>
->>>>>>> Stashed changes
           </div>
         </div>
         <!-- TOGGLE MENU -->
@@ -94,9 +86,6 @@
       </div>
     </header>
     <div id="getdata">
-<<<<<<< Updated upstream
-      <div id="filterdata"></div>
-=======
       <div id="filterdata">
         <div id="type">
           <p>Product Type</p>
@@ -136,6 +125,19 @@
             </label>
           </div>
         </div>
+        <button
+          id="onclick"
+          style="
+            background-color: rgb(135, 135, 241);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 10px;
+            margin: 30px;
+            font-weight: bold;
+          "
+        >
+          show data
+        </button>
         <div id="Brand">
           <p>Brand</p>
           <div>
@@ -182,34 +184,43 @@
             <label><input type="checkbox" id="lg" />LG</label>
           </div>
         </div>
-        <div id="filter">
-          <select id="price" class="select">
-            <option value="hide">--Sort By Price --</option>
-            <option value="10k to 20k">10k to 20k</option>
-            <option value="20k to 50k">20k to 30k</option>
-            <option value="50k to 1L">30k to 40k</option>
-            <option value="above 1L">40k to 50k</option>
-          </select>
-        </div>
         <button
-          id="onclick"
+          id="offclick"
           style="
             background-color: rgb(135, 135, 241);
             color: white;
             padding: 5px 20px;
             border-radius: 10px;
-            margin-left: 30px;
+            margin: 30px;
             font-weight: bold;
           "
         >
           show data
         </button>
+        <div id="filter">
+          <select id="price" class="select">
+            <option value="hide">--Sort By Price --</option>
+            <option value="hightolow">High to Low</option>
+            <option value="LowtoHigh">Low to High</option>
+          </select>
+        </div>
+        <div id="filter2">
+          <select id="price2" class="select">
+            <option value="hide">--Sort By Description --</option>
+            <option value="atoz">A to Z</option>
+            <option value="ztoa">Z to A</option>
+          </select>
+        </div>
       </div>
 
->>>>>>> Stashed changes
       <div id="alldata">
         <!-- append here -->
       </div>
+    </div>
+    <div id="pagination">
+      <button id="btn1">1</button>
+      <button id="btn2">2</button>
+      <button id="btn3">3</button>
     </div>
     <hr />
     <footer>

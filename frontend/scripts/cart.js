@@ -23,11 +23,7 @@ data.forEach((element,index) => {
     let card=document.createElement("div")
     let leftbox=document.createElement("div")
     let rightbox=document.createElement("div")
-<<<<<<< Updated upstream
-        card.classList.add("card")
-=======
         card.classList.add("box")
->>>>>>> Stashed changes
         let img = document.createElement("img");
         img.setAttribute("src", element.image);
 
@@ -38,10 +34,11 @@ data.forEach((element,index) => {
         price.innerText=element.price
         let button=document.createElement("button")
         button.innerText="VIEW DETAILS"
+        button.addEventListener("click",()=>{
+          localStorage.setItem("single-product",JSON.stringify(element))
+          window.location.href="../html/individual.html"
+        })
         let button2=document.createElement("button")
-<<<<<<< Updated upstream
-        button2.innerText="DELETE"
-=======
         button2.innerText="DELETE";
         button2.addEventListener("click",()=>{
             array = array.filter((ele, i) => {
@@ -55,14 +52,11 @@ data.forEach((element,index) => {
               displaydata(array)
               totaldata(array)
         })
->>>>>>> Stashed changes
         leftbox.append(img)
         rightbox.append(nameinp,price,button,button2)
         card.append(leftbox,rightbox)
         container.append(card)
 });
-<<<<<<< Updated upstream
-=======
   }
   totaldata()
   function totaldata(){
@@ -71,5 +65,4 @@ data.forEach((element,index) => {
     if(array.length>0){
         totalproduct.innerText=array.length
     }
->>>>>>> Stashed changes
   }
