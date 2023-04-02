@@ -1,4 +1,4 @@
-## Clone Project Name - ![App Screenshot](../legal-eyes-1121/frontend/images/logo.png)
+## Clone Project Name - ![App Screenshot]()
 
 ## Widely known as India’s no. 1 online classifieds platform, Bazzar Bloom is all about you. Our aim is to empower every person in the country to independently connect with buyers and sellers online. Here You can buy all the second hand products.
 
