@@ -9,6 +9,8 @@ function displaydata() {
           fetchdata=data
           display(data);
           searchbar(fetchdata)
+          // page1(fetchdata)
+
         })
         .catch((err) => {
           console.log(err);
@@ -383,4 +385,27 @@ function searchbar(fetchdata){
     display(newArr)
   
   })
+}
+ let btn1=document.getElementById("btn1")
+ let btn2=document.getElementById("btn2")
+ let btn3=document.getElementById("btn3")
+
+ btn1.addEventListener("click",()=>{
+  page1()
+ })
+
+
+function page1(fetchdata){
+  fetch(`http://localhost:8800/product/page?page=1&&limit=7`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        fetchdata=data
+        display(fetchdata);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 }
