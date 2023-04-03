@@ -13,7 +13,7 @@
 
 💫Tech-Stack->
 For Frontend : HTML5, CSS3, Javascript, ES6.
-For Backend :Nodejs ,MongoDB .
+For Backend :Nodejs ,MongoDB ,Express .
 
 ## ![ShopGIF]()
 
