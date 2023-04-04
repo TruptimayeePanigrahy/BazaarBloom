@@ -7,7 +7,7 @@ function displaydata() {
         .then((data) => {
           console.log(data);
           fetchdata=data
-          display(data);
+          // display(data);
           searchbar(fetchdata)
           // page1(fetchdata)
 
@@ -386,17 +386,27 @@ function searchbar(fetchdata){
   
   })
 }
+
+page1(1)
  let btn1=document.getElementById("btn1")
  let btn2=document.getElementById("btn2")
  let btn3=document.getElementById("btn3")
 
  btn1.addEventListener("click",()=>{
-  page1()
+  page1(1)
+ })
+
+ btn2.addEventListener("click",()=>{
+  page1(2)
+ })
+
+ btn3.addEventListener("click",()=>{
+  page1(3)
  })
 
 
-function page1(fetchdata){
-  fetch(`https://cyan-impossible-camel.cyclic.app/product/page?page=1&&limit=7`)
+function page1(btn1){
+  fetch(`http://localhost:8800/product/pagination/${btn1}`)
       .then((res) => {
         return res.json();
       })
