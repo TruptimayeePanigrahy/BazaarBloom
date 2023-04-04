@@ -101,7 +101,19 @@ Router.get('/page', async (req, res) => {
     }
   });
 
+Router.get("/pagination/:id",async(req,res)=>{
+    try {
+        let {id}=req.params
+        console.log(id)
+        let ans=(id-1)*7
+        let data=await productmodel.find().skip(ans).limit(7)
+        res.send(data)
 
+        
+    } catch (error) {
+        console.log(error)
+    }
+})
 
 
 
