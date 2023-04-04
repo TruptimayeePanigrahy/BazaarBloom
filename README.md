@@ -1,4 +1,4 @@
-## Clone Project Name - ![App Screenshot](https://i.postimg.cc/0j4WTpyy/1600x960-234194-quikr.jpg)
+## Clone Project Name - ![App Screenshot](https://i.postimg.cc/Ssp3KYcd/Screenshot-86.png)
 
 ## Widely known as India’s no. 1 online classifieds platform, Bazzar Bloom is all about you. Our aim is to empower every person in the country to independently connect with buyers and sellers online. Here You can buy all the second hand products.
 
