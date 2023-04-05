@@ -2,7 +2,7 @@
 
 ## Widely known as India’s no. 1 online classifieds platform, Bazzar Bloom is all about you. Our aim is to empower every person in the country to independently connect with buyers and sellers online. Here You can buy all the second hand products.
 
-✨project leader:-
+✨project Owner:-
 
 1.Truptimayee panigrahy
 <br>
@@ -27,11 +27,8 @@ For Backend :Nodejs ,MongoDB .
 
 - Cart Page
 
-- Checkout page
-
 - Sign Up , Login
-
-- Admin Authentication & Dashboard
+- prdoct owner details page
 
 ---
 
@@ -65,7 +62,7 @@ For Backend :Nodejs ,MongoDB .
 
 ![App Screenshot](https://i.postimg.cc/sXD8JxTR/Screenshot-98.png)
 
-# Cart |DeliveryAddress | Payment | Otp
+# Cart |
 
 ![App Screenshot]()
 
