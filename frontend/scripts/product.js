@@ -1,6 +1,6 @@
 let fetchdata
 function displaydata() {
-    fetch(`http://localhost:8800/product/show`)
+    fetch(`https://ill-pink-armadillo-belt.cyclic.app/product/show`)
         .then((res) => {
           return res.json();
         })
@@ -108,7 +108,7 @@ if(filtered.length>0){
 
 
   function querrydata() {
-    fetch(`http://localhost:8800/product/show/?${brand}`)
+    fetch(`https://ill-pink-armadillo-belt.cyclic.app/product/show/?${brand}`)
         .then((res) => {
           return res.json();
         })
@@ -265,7 +265,7 @@ return true
 
 
 function sortdata() {
-  fetch(`http://localhost:8800/product/price1`)
+  fetch(`https://ill-pink-armadillo-belt.cyclic.app/product/price1`)
       .then((res) => {
         return res.json();
       })
@@ -279,7 +279,7 @@ function sortdata() {
       });
 }
 function sortdata2() {
-  fetch(`http://localhost:8800/product/price2`)
+  fetch(`https://ill-pink-armadillo-belt.cyclic.app/product/price2`)
       .then((res) => {
         return res.json();
       })
@@ -304,7 +304,7 @@ filter1.addEventListener("change", () => {
 });
 
 function descdata() {
-  fetch(`http://localhost:8800/product/desc1`)
+  fetch(`https://ill-pink-armadillo-belt.cyclic.app/product/desc1`)
       .then((res) => {
         return res.json();
       })
@@ -318,7 +318,7 @@ function descdata() {
       });
 }
 function descdata2() {
-  fetch(`http://localhost:8800/product/desc2`)
+  fetch(`https://ill-pink-armadillo-belt.cyclic.app/product/desc2`)
       .then((res) => {
         return res.json();
       })
@@ -406,7 +406,7 @@ page1(1)
 
 
 function page1(btn1){
-  fetch(`http://localhost:8800/product/pagination/${btn1}`)
+  fetch(`https://ill-pink-armadillo-belt.cyclic.app/product/pagination/${btn1}`)
       .then((res) => {
         return res.json();
       })
