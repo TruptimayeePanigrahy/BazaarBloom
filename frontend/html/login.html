@@ -121,7 +121,7 @@
     document.getElementById("submit").addEventListener("click", () => {
       let email = document.getElementById("email").value;
       let password = document.getElementById("password").value;
-      let res = fetch("http://localhost:8800/user/login", {
+      let res = fetch("https://ill-pink-armadillo-belt.cyclic.app/user/login", {
         method: "POST",
         headers: {
           "content-type": "application/json",
